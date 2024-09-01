@@ -1,0 +1,99 @@
+/* Base Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #222;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+}
+
+a {
+  color: #ff6219;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.card-title {
+  color: #ff6219; /* Orange color */
+}
+
+/* Components */
+.header_top__icon_wrapper {
+  background-color: #e5e7eb; /* Equivalent to bg-gray-200 */
+  border-radius: 0.375rem; /* Equivalent to rounded-md */
+  padding: 6px; /* Equivalent to p-[6px] */
+  font-size: 14px; /* Equivalent to text-[14px] */
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s; /* Adding transition for hover effect */
+}
+
+.header_top__icon_wrapper:hover {
+  background-color: #ff8f9c; /* Equivalent to hover:bg-accent */
+  color: white; /* Equivalent to hover:text-white */
+}
+
+.navbar__link {
+  position: relative;
+}
+
+.navbar__link:hover {
+  color: #ff8f9c;
+  transition: all 0.4s;
+}
+
+.navbar__link::after {
+  position: absolute;
+  content: "";
+  background-color: #ff8f9c;
+  height: 3px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  transform: scale(0);
+  transform-origin: left;
+  transition: all 0.4s;
+}
+
+
+.navbar__link:hover::after {
+  transform: scale(1);
+}
+
+.header_top__icon_wrapper {
+  background-color: #f8f9fa; /* Equivalent to bg-light */
+  border-radius: 0.25rem; /* Equivalent to rounded */
+  padding: 0.5rem; /* Equivalent to p-2 */
+  font-size: 1rem; /* Equivalent to text-primary */
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.header_top__icon_wrapper:hover {
+  background-color: #0d6efd; /* Equivalent to hover-bg-primary */
+  color: white; /* Equivalent to hover-text-white */
+}
+
+.btn-primary:hover {
+  background-color: #e65c50;
+  border-color: #e65c50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: #e65c50;
+  transition: color 0.3s ease;
+}
+
