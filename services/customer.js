@@ -11,6 +11,7 @@ export const almariService={
 	getUserProfile,
 	allPendingOrders,
 	updateOrder,
+	deleteFromCart,
 	verifyOTP,
 	generateOTP
 }
@@ -192,6 +193,24 @@ async function generateOTP(params){
 		console.error('Error posting data:', error);
 	  }
 }
+
+async function deleteFromCart(params){
+	let apiUrl=`${almariURL}user/removeCartData/${params}`
+	const postOptions = {
+		method: 'DELETE',
+		headers: {
+		  'Content-Type': 'application/json',
+		},
+	  };
+	  
+	  try {
+		const data = await fetchData(apiUrl, postOptions);
+		return data;
+	  } catch (error) {
+		console.error('Error posting data:', error);
+	  }
+}
+
 
 async function getOrders(params){
 	let apiUrl=`${almariURL}orders/findUserOrders/${params}`
